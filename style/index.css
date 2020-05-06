@@ -20,8 +20,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	/* font-size: 100%; */
+	/* font: inherit; */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -46,4 +46,98 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+/* end of reset */
+/* general */
+a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+}
+/* end of general */
+/* header*/
+button.selected{
+    background-color: black;
+    color: white;
+}
+button.selected a{
+    color: lavenderblush;
+}
+header{
+    background-color: gray;
+    padding:50px;
+}
+h1{
+    font-size: 75px;
+    font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Oswald', sans-serif;
+}
+header nav{
+   
+    margin: 30px
+}
+header button{
+    padding: 10px;
+    width: 175px;
+    /* margin: 30px; */
+}
+/* end of header */
+
+/* personal section */
+#personal{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding:50px;
+}
+#personal div{
+    padding: 50px;
+}
+#personal img{
+    width: 50%;
+}
+#personal h2{
+    margin: 20px;
+    font-size:40px;
+}
+#personal button{
+    margin:20px;
+    padding:10px 20px;
+    /* font-size:30px; */
+    /* padding: 10px; */
+}
+/* #personal a{
+    padding: 100px;
+} */
+#personal p{
+    margin: 20px;
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+/* How could I have done that easier and less repedatively? */
+
+.pic{
+    width: 25%;
+    box-sizing: border-box;
+
+}
+/* section#gallery .pic{
+    display: flex;
+    flex-wrap: wrap;
+}  */
+img{
+    width: 250px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* *{
+    border: 2px solid red;
+} */
+.container1{
+    margin: auto;
+    width: 85%;
 }
