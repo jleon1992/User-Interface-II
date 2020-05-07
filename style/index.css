@@ -17,12 +17,14 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+    
 	margin: 0;
 	padding: 0;
 	border: 0;
-	/* font-size: 100%; */
 	/* font: inherit; */
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-size: 62.5%
+    
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,7 +50,9 @@ table {
 	border-spacing: 0;
 }
 /* end of reset */
-
+/* *{
+    border: 5px solid blue;
+} */
 
 
 /* general */
@@ -63,7 +67,7 @@ img{
 a{
     text-decoration: none;
     color: black;
-    font-size: medium;
+    font-size: 2rem;
 }
 /* end of general */
 /* header*/
@@ -72,21 +76,29 @@ a{
 
 header{
     background-color: gray;
-    padding:50px;
+    padding: 5%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+ 
 }
 h1{
-    font-size: 75px;
+    font-size: 7.5rem;
     font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Oswald', sans-serif;
-letter-spacing: 2px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 5%;
 }
 header nav{
    
-    margin: 30px
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2%;
 }
-header button{
-    padding: 10px;
-    width: 175px;
+button{
+    padding: 1%;
+    width: 15%
 }
 
 /* ??? button selected */
@@ -103,31 +115,35 @@ button.selected a{
 #personal{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 100px;
     padding:50px;
-}
+}   
 #personal div{
-    padding: 50px;
+    padding: 1%; 
+    margin: 5%;
+    width: 40%;  
 }
 #personal img{
-    width: 50%;
+    width: 40%;
 }
 #personal h2{
     margin: 20px;
     font-size:40px;
 }
 #personal button{
-    margin:20px;
-    padding:10px 20px;
+    /* margin:20px;
+    padding:10%; */
+    width: 40%
 }
 
 #personal p{
-    margin: 20px;
+    margin: 2rem;
     font-size: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
-    line-height: 50px;
+    line-height: 5rem;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 0.3rem;
 }
 /* How could I have done that easier and less repedatively? */
 /* end of personal */
@@ -152,14 +168,15 @@ section#gallery{
 /* footer */
 footer{
     background-color: gray;
-    padding: 90px;
-    text-align: center;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
 }
 footer h2{
     font-family: sans-serif;
    letter-spacing: 6px;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 32px;
+    font-size: 3.2rem;
 }
 footer button{
     margin: 20px;
@@ -199,3 +216,15 @@ footer button{
       color: white;
   }
 /* end of footer */
+/* media queries */
+
+@media(max-width: 800px){
+
+}
+
+@media(max-width: 500px){
+    #personal img{
+        width: 100%;
+    }
+
+}
