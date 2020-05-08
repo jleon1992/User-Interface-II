@@ -1,1 +1,277 @@
 /* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font: inherit; */
+    vertical-align: baseline;
+    font-size: 62.5%
+    
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of reset */
+/* *{
+    border: 5px solid blue;
+} */
+
+
+/* general */
+img{
+    width: 100%;
+    box-sizing: border-box;
+}
+.container{
+    margin: auto;
+    width: 85%;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+/* end of general */
+/* header*/
+
+/* selected button */
+
+header{
+    background-color: gray;
+    padding: 5%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+ 
+}
+h1{
+    font-size: 7.5rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 5%;
+}
+header nav{
+   
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2%;
+}
+button{
+    padding: 1%;
+    width: 15%
+}
+
+/* ??? button selected */
+button.selected{
+    background-color: black;
+    color: white;
+}
+button.selected a{
+    color: lavenderblush;
+}
+/* end of header */
+
+/* PERSONAL SECTION */
+#personal{
+    /* FLEX */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    padding:50px;
+}  
+
+#personal div{
+    /* padding: 1%;  */
+    margin: 1%;
+    width: 48%;  
+}
+
+#personal img{
+    /* width: 40%; */
+}
+#personal h2{
+    margin: 20px;
+    font-size:40px;
+}
+#personal button{
+    /* margin:20px;
+    padding:10%; */
+    width: 40%
+}
+
+#personal p{
+    margin: 2rem;
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 5rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+}
+/* How could I have done that easier and less repedatively? */
+/* end of personal */
+/* galley section */
+section#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* margin: 100px; */
+}
+
+.pic{
+    width:23%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 3% 1%;
+    display: flex;
+    flex-direction: column;
+}
+/* .pic h3{
+    font-size: 2rem;
+} */
+/* end of gallery */
+
+/* footer */
+footer{
+    background-color: gray;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+footer h2{
+    font-family: sans-serif;
+   letter-spacing: 6px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3.2rem;
+    margin: 1%;
+}
+
+footer button{
+    margin: 1%;
+    /* padding: 20px; */
+    width: 15%;
+    /* height: 40px; */
+}
+#social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 3rem;
+    margin: 1%;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    width: 4%;
+  }
+
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram{
+      background: purple;
+      color: white;
+  }
+/* end of footer */
+/* media queries */
+@media(max-width: 1080px){
+    /* body{
+        background-color: orange;
+    } */
+    #personal div{
+        width: 100%;
+    }
+    .pic{
+        width: 48%;
+    }
+}
+@media(max-width: 800px){
+    /* body{
+        background-color: lightcoral;
+    } */
+    .pic{
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px){
+    /* body{
+        background-color: purple;
+    } */
+    .pic{
+        width: 100%;
+    }
+}
